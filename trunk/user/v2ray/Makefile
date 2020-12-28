@@ -27,7 +27,8 @@ build_extract:
 	fi )
 
 build_v2ray:
-	( cd $(THISDIR)/$(v2ray_dir); \
+	( go env; \
+	cd $(THISDIR)/$(v2ray_dir); \
 	sed -i \
 			'$(V2RAY_SED_ARGS)' \
 			distro/all/all.go ; \
